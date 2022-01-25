@@ -1,0 +1,44 @@
+Environment:
+
+  Python 3.7
+
+Required packages:
+
+  fast-bert
+  https://github.com/kaushaltrivedi/fast-bert
+
+  bert-as-service
+  https://github.com/hanxiao/bert-as-service
+
+  pygcn
+  https://github.com/tkipf/pygcn
+
+data:
+
+  put training data, testing data, sample submission and citation data here.
+
+Preprocessing:
+
+  adj_matrix.py: producing adjacent matrix from original citation graph.
+  bag_of_words.py: producing node feature for GCN by applying bag-of-words for paper abstract.
+  category_onehot.py: producing onehot encoding for paper category.
+
+Model:
+
+  Bert: train model using bert_base_uncased, add category, simularity and citation features
+  XLNet: train model using xlnet_large_cased
+  GCN: train model using GCN (pygcn package)
+
+Ensemble:
+
+  ensemble_final.py: ensemble models by average the predicted probability
+
+lib:
+
+  pygcn/ : third-party source code of GCN on pytorch
+  TA_sample.py: TA's sample code
+
+Reproduce best result:
+
+  python3 ensemble_final.py <output_file>
+  <output_file>: name of output csv.

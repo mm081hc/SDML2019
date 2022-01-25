@@ -1,0 +1,12 @@
+/src/task0: 存放2-0的code
+	/model: 存放encoder, decoder, seq2seq
+	/train.py: training code
+	/eval.py: testing code
+
+/src/task1: 存放2-1的code
+	/model: 存放encoder, decoder, seq2seq
+	/train.py: training code
+	/eval.py: testing code
+
+
+training方式：將dataset放到/src/taskX/dataset，更改/src/config/config.py
